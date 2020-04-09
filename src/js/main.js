@@ -56,7 +56,7 @@ class webvr {
 
 		this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'leadenhall_market_2k.hdr', (envMap) => {
 			this.render();
-			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'boot2.gltf', (model) => {
+			this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'boot.gltf', (model) => {
 				pivot.scale.set(0.1, 0.1, 0.1);
 				pivot.position.set(0, 0, 0); //-0.5
 				pivot.add(model);
