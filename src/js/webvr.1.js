@@ -562,7 +562,8 @@ const shaderPoint = {
 	void main() {
 		vec4 textureColor = texture2D(texture, gl_PointCoord);
 		// if (textureColor.a < 0.5) discard;
-		gl_FragColor = textureColor * vec4(color * vColor.xyz, 1.0);
+		gl_FragColor = textureColor * vec
+		4(color * vColor.xyz, 1.0);
 		// float depth = gl_FragCoord.z / gl_FragCoord.w;
 		gl_FragColor = vec4(vec3(1.0), gl_FragColor.w);
 	}

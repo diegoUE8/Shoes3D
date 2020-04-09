@@ -10796,10 +10796,10 @@ function () {
       controls.update();
       var pivot = this.pivot = new THREE.Group();
       this.scene.add(pivot);
-      this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'leadenhall_market_2k.hdr', function (envMap) {
+      this.loadRgbeBackground('/ Shoes3D/textures/equirectangular/', 'leadenhall_market_2k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'boot.gltf', function (model) {
+        _this.loadGltfModel('/ Shoes3D/models/gltf/model/gltf/', 'boot.gltf', function (model) {
           pivot.scale.set(0.1, 0.1, 0.1);
           pivot.position.set(0, 0, 0); //-0.5
 
