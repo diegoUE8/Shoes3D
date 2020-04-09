@@ -10799,8 +10799,8 @@ function () {
       this.loadRgbeBackground('/ModelViewer/textures/equirectangular/', 'leadenhall_market_2k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'model2.gltf', function (model) {
-          pivot.scale.set(0.001, 0.001, 0.001);
+        _this.loadGltfModel('/ModelViewer/models/gltf/model/gltf/', 'boot2.gltf', function (model) {
+          pivot.scale.set(0.1, 0.1, 0.1);
           pivot.position.set(0, 0, 0); //-0.5
 
           pivot.add(model);
