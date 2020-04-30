@@ -10799,9 +10799,9 @@ function () {
       this.loadRgbeBackground('/Shoes3D/textures/equirectangular/', 'leadenhall_market_2k.hdr', function (envMap) {
         _this.render();
 
-        _this.loadGltfModel('/Shoes3D/models/gltf/model/gltf/', 'boot.gltf', function (model) {
-          pivot.scale.set(0.1, 0.1, 0.1);
-          pivot.position.set(0, 0, 0); //-0.5
+        _this.loadGltfModel('/Shoes3D/models/gltf/model/gltf/', 'worn_brown_boots.gltf', function (model) {
+          pivot.scale.set(1.5, 1.5, 1.5);
+          pivot.position.set(0, -0.2, 0); //-0.5
 
           pivot.add(model);
 
@@ -10993,18 +10993,18 @@ function () {
       loaderObj2.setMaterials(this.materials1);
       loaderObj2.load(
       	'models/valagro/valagro.obj',
-      			(object) => {
-      				object.traverse((child) => {
+      		(object) => {
+      			object.traverse((child) => {
       			// console.log(child);
       			if (child instanceof THREE.Mesh) {
       				// child.material = materialObj2;
       				child.geometry.translate(0, 0, -100);
       			}
       		});
-      				object.onBeforeRender = () => {
-      				}
-      				this.object2 = object;
-      				meshtest2.add(object);
+      			object.onBeforeRender = () => {
+      			}
+      			this.object2 = object;
+      			meshtest2.add(object);
       	},
       	(xhr) => {
       		// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -11013,20 +11013,20 @@ function () {
       		console.log('An error happened');
       	}
       );
-      		const loaderObj3 = new THREE.OBJLoader();
+      	const loaderObj3 = new THREE.OBJLoader();
       loaderObj3.setMaterials(this.materials2);
       loaderObj3.load(
       	'models/oil/oilbottle.obj',
-      			(object) => {
-      				object.traverse((child) => {
-      					if (child instanceof THREE.Mesh) {
-      						child.geometry.translate(0, 0, -80);
+      		(object) => {
+      			object.traverse((child) => {
+      				if (child instanceof THREE.Mesh) {
+      					child.geometry.translate(0, 0, -80);
       			}
       		});
-      				object.onBeforeRender = () => {
-      				}
-      				this.object3 = object;
-      				meshtest3.add(object);
+      			object.onBeforeRender = () => {
+      			}
+      			this.object3 = object;
+      			meshtest3.add(object);
       	},
       	(xhr) => {
       		// console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -11035,14 +11035,14 @@ function () {
       		console.log('An error happened');
       	}
       );
-      		const loaderFBX = new THREE.FBXLoader();
+      	const loaderFBX = new THREE.FBXLoader();
       loaderFBX.load(
       	'models/oil/objects.fbx',
       	(object) => {
       		object.setMaterials(materialObj1);
       		object.position(0, 0, -50);
-      				object.onBeforeRender = () => {
-      					},
+      			object.onBeforeRender = () => {
+      				},
       			this.object4 = object;
       		meshTest4.add(object);
       	},
